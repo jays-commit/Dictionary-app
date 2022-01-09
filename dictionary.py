@@ -1,5 +1,6 @@
 import json
 import difflib
+import sys
 
 data = json.load(open("data.json"))
 
@@ -35,12 +36,16 @@ while True:
 
     print(translate(word))
 
-    cont = input("\nWould you like to continue? Y/N\n")
-    cont = cont.lower()
-    if cont == "y":
-        continue
+    while True:
+        cont = input("\nWould you like to continue? Y/N\n")
+        cont = cont.lower()
+        if cont == "y":
+            break
 
-    if cont == "n":
-        break
+        elif cont == "n":
+            sys.exit()
 
-print("Session has ended")
+        else:
+            continue
+
+
