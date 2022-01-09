@@ -37,7 +37,7 @@ while True:
     print(translate(word))
 
     while True:
-        cont = input("\nWould you like to continue? Y/N\n")
+        cont = input("\nWould you like to continue? y/n\n")
         cont = cont.lower()
         if cont == "y":
             break
@@ -46,6 +46,7 @@ while True:
             sys.exit()
 
         else:
-            continue
+            print("invalid input:")
+
 
 
