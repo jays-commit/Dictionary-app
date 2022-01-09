@@ -7,9 +7,9 @@ data = json.load(open("data.json"))
 
 def translate(word):
     """
-    
-    :param word:
-    :return:
+    This function takes a word from the user and returns a string definition
+    :param word: string input
+    :return: returns string
     """
     word = word.lower()
     if word in data:
